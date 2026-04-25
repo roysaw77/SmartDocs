@@ -2,6 +2,10 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from litellm import completion
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # Load variables from .env
 
 app = FastAPI()
 app.add_middleware(
@@ -11,7 +15,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-API_KEY = "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"
+API_KEY = os.getenv("NVIDIA_API_KEY")
+
+if not API_KEY:
+    print("❌ ERROR: NVIDIA_API_KEY not found in .env file!")
+else:
+    print(f"✅ API Key loaded successfully (Starts with: {API_KEY[:8]}...)")
 class RequestData(BaseModel):
     text: str
 
