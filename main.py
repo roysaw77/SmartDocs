@@ -65,7 +65,7 @@ def suggest(data: GenerationData):
 
         result = response.choices[0].message.content.strip()
 
-        # ✅ 简单清洗（避免奇怪输出）
+        
         if len(result.split()) > 6:
             result = " ".join(result.split()[:6])
 
