@@ -175,21 +175,27 @@ kbd {
   font-size: var(--ta-font-size);
   line-height: var(--ta-line-height);
   padding: var(--ta-padding);
-  color: var(--text);             /* real text color (hidden under textarea) */
+  color: transparent;            /* ← Hide the mirror's real text, only show the ghost span */
   white-space: pre-wrap;
   word-break: break-word;
-  overflow: hidden;              /* scroll is synced via JS */
+  overflow-y: scroll;            /* ← Force scrollbar space to match textarea */
   pointer-events: none;
   user-select: none;
-  border: none;
-  background: transparent;
+  border: 1px solid transparent; /* ← Match the textarea's border thickness */
+  scrollbar-width: none;         /* Hide scrollbar in Firefox */
+}
+
+.ghost-mirror::-webkit-scrollbar {
+  display: none;                 /* Hide scrollbar in Chrome/Safari */
 }
 
 /* The faded ghost suggestion span */
 .ghost-suggestion {
   color: var(--ghost-color);
   font-style: italic;
-  animation: fadeSlideIn 0.2s ease;
+  /* We make the ghost text visible even if the parent is transparent */
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Actual textarea — transparent background so mirror shows through */
@@ -203,13 +209,14 @@ kbd {
   line-height: var(--ta-line-height);
   padding: var(--ta-padding);
   color: var(--text-h);
-  background: transparent;  /* ← key: let mirror show through */
-  border: none;
+  background: transparent;
+  border: 1px solid transparent; /* Keep it invisible but present for layout */
   outline: none;
   resize: none;
   caret-color: var(--accent);
   white-space: pre-wrap;
   word-break: break-word;
+  overflow-y: scroll;            /* ← Always show scrollbar space */
 }
 
 .ghost-textarea::placeholder {

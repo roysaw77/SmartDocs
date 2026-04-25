@@ -1,5 +1,4 @@
-# INDUSTRY COLLABORATION
-## Fix the Docs: Smarter, Faster, Maintainable Documentation for the Real World by iFAST
+## Fix the Docs: Smarter, Faster, Maintainable Documentation for the Real World
 ### CONTEXT
 In real-world tech environments, documentation is a critical but broken part of the software development lifecycle.
 
@@ -9,12 +8,7 @@ In real-world tech environments, documentation is a critical but broken part of 
 
 This leads to onboarding delays, wasted engineering time, and avoidable bugs — all due to poor or outdated docs.
 
-### YOUR CHALLENGE
-Design and build a smart documentation assistant/tool that improves how technical documentation is created, consumed, and maintained in evolving software environments.
-
-You don’t have to solve everything. Focus on at least two of the following dimensions:
-
-<ins>**Focus Areas (Pick 2+)**</ins>
+<ins>**Function**</ins>
 1. <ins>Simplify Writing</ins>
    - Auto-generate starter docs from code, git commits, or comments
    - Templates or AI suggestions to make writing faster
@@ -25,13 +19,16 @@ You don’t have to solve everything. Focus on at least two of the following dim
    -Q&A search: Ask a question, get an answer (like ChatGPT for docs)
    -Visualizations (flow diagrams, API call graphs, changelogs)
 
-3. <ins>Make Maintenance Easy</ins>
-   -Detect stale documentation (doc drift vs. code)
-   -Notify users when dependent components change
-   -Auto-suggest doc updates from diffs or pull requests
+Deploy-vercel: https://smart-docs-six.vercel.app/
 
-**Deliverables (for 3-month scope)**
--Functional prototype (web app, CLI tool, plugin, or bot)
--Demo of real-world use (sample repo, API, or documentation system)
--GitHub repo with code + brief README
--Presentation/pitch (with a problem-solution-product flow)
+application:
+![alt text](image.png)
+Suggestion word when typing
+
+![alt text](image-1.png)
+Summary and explaination of the text
+
+future (Coming Soon): 
+- Q&A features (Ask your document anything)
+- able to Upload the PDF file
+- able to make a mind map or the charts from the document
