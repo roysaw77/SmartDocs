@@ -22,11 +22,18 @@ This leads to onboarding delays, wasted engineering time, and avoidable bugs —
 Deploy-vercel: https://smart-docs-six.vercel.app/
 
 application:
-![alt text](image.png)
-Suggestion word when typing
 
-![alt text](image-1.png)
-Summary and explaination of the text
+<p align="center">
+  <img src="image.png" width="600" alt="Suggestion Demo">
+  <br>
+  <em>Suggestion word when typing</em>
+</p>
+
+<p align="center">
+  <img src="image-1.png" width="600" alt="Summary Demo">
+  <br>
+  <em>Summary and explanation of the text</em>
+</p>
 
 future (Coming Soon): 
 - Q&A features (Ask your document anything)
